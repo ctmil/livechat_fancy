@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+	<record id="fancy_livechat" model="ir.ui.view">
+        <field name="name">fancy.livechat</field>
+        <field name="inherit_id" ref="im_livechat.support_page"/>
+        <field name="arch" type="xml">
+                <xpath expr="//html" position="replace">
+                <html style="height: 100%">
+                <head>
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                    <title><t t-esc="channel.name"/> | Chat</title>
+
+                    <t t-raw="channel.script_external"/>
+
+                    <style type="text/css">
+                        body {
+                            height: 100%;
+                            font-size: 16px;
+                            font-weight: 400;
+                            font-family: "Lato", "Lucida Grande", "Helvetica neue", "Helvetica", "Verdana", "Arial", sans-serif;
+                            overflow: hidden;
+                            overflow-y: auto;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            width: 100%;
+                            height: 100%;
+                            background: #FFF;
+			    box-shadow: inset 0 0 40px #999;
+                        }
+                        .main {
+                            position: absolute;
+                            opacity: 0;
+                            top: 50%;
+                            width: 100%;
+                            margin-top: -150px;
+                            color: #213cad;
+                            text-align: center;
+                        }
+                        .main h1 {
+                            font-size: 54px;
+			    text-shadow: 0 1px 2px rgba(34, 52, 72, 0.6);
+                        }
+                        .main div {
+                            font-style: italic;
+                        }
+			.o_livechat_button {
+        		    font-size:16px !important;
+        		    background-color: rgb(33, 60, 173, 0.8) !important;
+                            border-top-left-radius: 3px !important;
+                            border-top-right-radius: 3px !important;
+                            border: 1px solid #2a43ab !important;
+                        }
+                        .o_thread_window .o_thread_window_header {
+                            border-bottom: 1px solid #0a1a5f !important;
+                            background-color: #2b4ee0 !important;
+                        }
+                    </style>
+                </head>
+
+		<body>
+                     <div class="main" style="opacity: 1;">
+                        <h1 class="channel_name"><t t-esc="channel.name"/></h1>
+			<button class="">Testing Operator</button>
+                    </div>
+		    <script>
+			
+		    </script>
+		    <!-- Fancy LiveChat powered by Moldeo Interactive [www.moldeointeractive.com.ar] -->
+                </body>
+            	</html>
+                </xpath>
+        </field>
+    	</record>        
+    </data>
+</odoo>
