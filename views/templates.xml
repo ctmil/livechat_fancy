@@ -119,17 +119,17 @@
 		<body>
 		    <div id="online">
 			<div class="status">
-				<span class="green_ball"></span><span class="internal_text">We are online</span>
+				<span class="green_ball"></span><span class="internal_text"><t t-esc="channel.online" /></span>
 			</div>
 		    </div>
 		    <div id="offline">
                         <div class="status">
-                                <span class="red_ball"></span><span class="internal_text">We are offline</span>
+                                <span class="red_ball"></span><span class="internal_text"><t t-esc="channel.offline" /></span>
                         </div>
                     </div>
                     <div class="main" style="opacity: 1;">
                         <h1 class="channel_name"><t t-esc="channel.name"/></h1>
-			<button id="button_chat" class="btn">Chat with an Operator</button>
+			<button id="button_chat" class="btn"><t t-esc="channel.btn_message" /></button>
                     </div>
 		    <script>
 			function openChat(){
@@ -163,6 +163,19 @@
             	</html>
                 </xpath>
         </field>
-    	</record>        
+    	</record>
+
+	<record id="fancy_livechat_options" model="ir.ui.view">
+        <field name="name">fancy.livechat.options</field>
+	<field name="model">im_livechat.channel</field>
+        <field name="inherit_id" ref="im_livechat.im_livechat_channel_view_form"/>
+        <field name="arch" type="xml">
+		<xpath expr="//notebook/page[2]/group" position="inside">
+			<field name="online" />
+			<field name="offline" />
+			<field name="btn_message" />
+		</xpath>
+	</field>
+	</record>
     </data>
 </odoo>
