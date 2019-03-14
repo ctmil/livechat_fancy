@@ -2,14 +2,10 @@
 
 from odoo import models, fields, api
 
-# class livechat_fancy(models.Model):
-#     _name = 'livechat_fancy.livechat_fancy'
+class livechat_fancy(models.Model):
+	_inherit = 'im_livechat.channel'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+	online = fields.Char('Online message', default='We are online')
+	offline = fields.Char('Offline message', default='We are offline')
+	btn_message = fields.Char('Button message', default='Chat with Operator')
+
