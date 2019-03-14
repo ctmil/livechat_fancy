@@ -9,6 +9,7 @@
                 <head>
                     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		    <link type="image/x-icon" rel="shortcut icon" href="/web/image/website/1/favicon/"/>
                     <title><t t-esc="channel.name"/> | Chat</title>
 
                     <t t-raw="channel.script_external"/>
