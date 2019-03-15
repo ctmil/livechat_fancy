@@ -1,0 +1,111 @@
+body {
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Lato", "Lucida Grande", "Helvetica neue", "Helvetica", "Verdana", "Arial", sans-serif;
+    overflow: hidden;
+    overflow-y: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    box-shadow: inset 0 0 40px #bbb;
+}
+.main {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    width: 100%;
+    margin-top: -150px;
+    color: #213cad;
+    text-align: center;
+}
+.main h1 {
+    font-size: 42px;
+    text-shadow: 0 1px 2px rgba(34, 52, 72, 0.6);
+}
+.main div {
+    font-style: italic;
+}
+.o_livechat_button {
+    display:none;
+    font-size:16px !important;
+    background-color: rgb(33, 60, 173, 0.8) !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    border: 1px solid #2a43ab !important;
+}
+.o_thread_window .o_thread_window_header {
+    border-bottom: 1px solid #0a1a5f !important;
+    background-color: #2b4ee0 !important;
+}
+.o_thread_window {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+.o_thread_composer {
+    margin:5px !important;
+    height:30px !important;
+}
+.o_thread_window .o_thread_composer input {
+    height: 30px !important;
+}
+@media only screen and (min-width: 768px) {
+    .o_thread_window {
+        width:70% !important;
+        height:80% !important;
+        left: 50% !important;
+        margin-left: -35% !important;
+    }
+}
+#online, #offline {
+    padding: 15px 20px;
+    display:none;
+}
+.status {
+    width: auto;
+    display: inline-block;
+    border: 1px solid #bbb;
+    padding: 10px;
+    border-radius: 25px;
+}
+.green_ball {
+    display:inline-block;
+    width:14px;
+    height:14px;
+    background-color:#00ff00;
+    border-radius:50%;
+    margin-right:10px;
+    box-shadow:1px 1px 2px #444;
+}
+.red_ball {
+    display:inline-block;
+    width:14px;
+    height:14px;
+    background-color:#ff0000;
+    border-radius:50%;
+    margin-right:10px;
+    box-shadow:1px 1px 2px #444;
+}
+.internal_text {
+    display:inline-block;
+    font-size:14px;
+}
+.btn {
+    background-color: #213cad;
+    color: #fff;
+    border: 1px solid #304499;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #ccc;
+    font-size: 15px;
+    margin:0 auto;
+}
+.btn:hover {
+    background-color: #304499;
+    cursor:pointer;
+}
+
