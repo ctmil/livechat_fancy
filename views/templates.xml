@@ -22,7 +22,7 @@
 		<body>
 		    <div id="online">
 			<div class="status">
-				<span class="green_ball"></span><span class="internal_text"><t t-esc="channel.online" /></span>
+				<span class="green_ball fadeBall"></span><span class="internal_text"><t t-esc="channel.online" /></span>
 			</div>
 		    </div>
 		    <div id="offline">

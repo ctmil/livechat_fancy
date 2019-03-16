@@ -1,3 +1,9 @@
+@keyframes fadeLoop {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 body {
     height: 100%;
     font-size: 16px;
@@ -88,6 +94,11 @@ body {
     border-radius:50%;
     margin-right:10px;
     box-shadow:1px 1px 2px #444;
+}
+.fadeBall {
+    animation-name: fadeLoop;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 .internal_text {
     display:inline-block;
